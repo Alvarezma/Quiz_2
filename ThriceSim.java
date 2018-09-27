@@ -3,7 +3,7 @@ public class ThriceSim {
     public static void main ( String[] args ) {
         
         long total = 0;
-        double tempAver;
+        // double tempAver;
         double average = 0.0;
 
         for (int plays = 1; plays <= 1000; plays++)   {
@@ -54,14 +54,16 @@ public class ThriceSim {
             }
 
             total = total + tally;
-            if (plays % 100 == 0)   {
-                tempAver = total / 100.0;
-                average = average + tempAver;
-                total = 0;
-            }
+            System.out.println(tally);
+            System.out.println("    " + total);
+            // if (plays % 10 == 0)   {
+            //     tempAver = total / 100.0;
+            //     average = average + tempAver;
+            //     total = 0;
+            // }
         }
 
-        average = average / 10.0;
+        average = total / 1000.0;
         System.out.println("Average over 1000 games: " + average);
     }
 }
