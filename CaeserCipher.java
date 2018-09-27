@@ -20,8 +20,6 @@ public class CaeserCipher {
             char chr = message.charAt(count);
             int value = (int) chr;
 
-            // System.out.println((count / code.length()) * code.length());
-
             char codeChr = code.charAt(count - ((count / code.length()) * code.length()));
             int shift = ((int) codeChr) - 96;
             value = value + shift;
